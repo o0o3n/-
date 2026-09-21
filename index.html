@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Приглашение на прогулку</title>
+    <meta
+      name="description"
+      content="Романтичное приглашение на прогулку с датой, местом и кнопками выбора."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="romantic-page">
+    <main class="invite-card">
+      <div class="top-line">❤</div>
+      <p class="eyebrow">Ты мне нужна не просто так</p>
+      <h1>Пойдём на прогулку?</h1>
+
+      <div class="details">
+        <div class="detail-item">
+          <span>Дата</span>
+          <strong id="dateValue">27 сентября</strong>
+        </div>
+        <div class="detail-item">
+          <span>Время</span>
+          <strong id="timeValue">Вечером</strong>
+        </div>
+        <div class="detail-item">
+          <span>Место</span>
+          <strong>У парка</strong>
+        </div>
+      </div>
+
+      <form id="dateForm" class="date-form">
+        <label>
+          Дата
+          <input id="dateInput" type="date" value="2026-09-27" />
+        </label>
+        <label>
+          Время
+          <input id="timeInput" type="time" value="19:30" />
+        </label>
+      </form>
+
+      <p class="message">
+        Я хочу провести с тобой немного времени, просто поболтать, посмеяться и
+        насладиться атмосферой рядом. Ты — самое приятное место в моём дне.
+      </p>
+
+      <div class="buttons">
+        <a class="button primary" href="mailto:hello@example.com?subject=Я%20согласен%20на%20прогулку">Да, конечно</a>
+        <a class="button secondary" href="https://maps.google.com/?q=%D0%BF%D0%B0%D1%80%D0%BA">Где встретимся?</a>
+        <button class="button ghost" type="button" id="sadButton">Не хочу встречаться</button>
+      </div>
+
+      <p class="footer-note" id="footerNote">Куда хочешь — там и встретимся 💫</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
