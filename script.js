@@ -2,6 +2,7 @@ const dateInput = document.getElementById('dateInput');
 const timeInput = document.getElementById('timeInput');
 const dateValue = document.getElementById('dateValue');
 const timeValue = document.getElementById('timeValue');
+const yesButton = document.getElementById('yesButton');
 const sadButton = document.getElementById('sadButton');
 const footerNote = document.getElementById('footerNote');
 
@@ -34,6 +35,13 @@ if (dateInput && timeInput && dateValue && timeValue) {
   dateInput.addEventListener('input', updateValues);
   timeInput.addEventListener('input', updateValues);
   updateValues();
+}
+
+if (yesButton && dateValue && timeValue && footerNote) {
+  yesButton.addEventListener('click', () => {
+    footerNote.textContent = `Спасибо, тогда жду! Дата: ${dateValue.textContent}, время: ${timeValue.textContent}, место: У парка.`;
+    footerNote.classList.remove('sad');
+  });
 }
 
 if (sadButton && footerNote) {
